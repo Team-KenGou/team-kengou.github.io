@@ -240,9 +240,9 @@
             font-size: 24px;
             line-height: 1;
         }
-    /* place buttons outside the screenshot frame */
-    .slideshow-btn.prev { left: 10%; }
-    .slideshow-btn.next { right: 10%; }
+        /* place buttons outside the screenshot frame */
+        .slideshow-btn.prev { left: 0%; }
+        .slideshow-btn.next { right: 0%; }
         .slideshow-btn:focus { outline: 2px solid var(--secondary-color); }
         /* move dots below the screenshot frame */
         .dots {
@@ -265,11 +265,11 @@
         .dot.active { background: white; transform: scale(1.15); }
         @media (max-width: 768px) {
             /* keep width responsive; aspect-ratio will determine height */
-            .slideshow-frame { width: 220px; aspect-ratio: 215 / 466; }
-            .slideshow-btn { font-size: 20px; padding: 6px 10px; }
-            .slideshow-btn.prev { left: -42px; }
-            .slideshow-btn.next { right: -42px; }
-            .dots { bottom: -22px; }
+                .slideshow-frame { width: 220px; aspect-ratio: 215 / 466; }
+                .slideshow-btn { font-size: 20px; padding: 6px 10px; }
+                .slideshow-btn.prev { left: 0; }
+                .slideshow-btn.next { right: 0; }
+                .dots { bottom: -22px; }
         }
     </style>
 </head>
