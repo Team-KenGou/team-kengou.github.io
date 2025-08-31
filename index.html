@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quria (キュリア) - AIがあなただけの学習プランを自動作成</title>
+    <meta name="description" content="学びたいことを入力するだけ！AIがあなただけの学習プランを自動で作成します。完全無料で始められる革新的な学習体験を、今すぐその手に。">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --bg-color: #FFFFFF;
+            --light-gray: #f4f4f4;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--bg-color);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .app-store-badge {
+            display: inline-block;
+            height: 40px;
+        }
+        .app-store-badge img {
+            height: 100%;
+        }
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-image-placeholder {
+            width: 300px;
+            height: 600px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 40px;
+            margin: 40px auto 0;
+            border: 10px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #333;
+        }
+        section {
+            padding: 60px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .feature-card {
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .feature-icon-placeholder {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .recommendations {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .recommendations ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recommendations li {
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234A90E2"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .cta {
+            text-align: center;
+        }
+        .cta h2 {
+             color: #333;
+        }
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero-image-placeholder {
+                width: 220px;
+                height: 440px;
+            }
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Quria</div>
+            <a href="#" class="app-store-badge">
+                <img src="https://via.placeholder.com/135x40?text=Download+on+the+App+Store" alt="Download on the App Store">
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>あなたの学びを、次のレベルへ。</h1>
+            <p>学びたいことを入力するだけ！AIがあなただけの学習プランを自動で作成します。<br>完全無料で始められる革新的な学習体験を、今すぐその手に。</p>
+            <a href="#" class="app-store-badge">
+                <img src="https://via.placeholder.com/135x40?text=Download+on+the+App+Store" alt="Download on the App Store">
+            </a>
+            <div class="hero-image-placeholder">[ アプリ画面イメージ ]</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container about-content">
+            <h2>AIが導く、新しい学びのカタチ</h2>
+            <p><strong>Quria（キュリア）</strong>は、あなたの「学びたい」をAIが全力でサポートする、完全無料の革新的な学習プラットフォームです。<br>何をどこから学べばいいかわからない…そんな悩みはもう不要です。学習したいテーマ（例：「マーケティング入門」「TOEICの頻出英単語」「日本の歴史」など）を入力するだけで、AIがあなたに最適化されたカリキュラムを瞬時に作成。ゲーム感覚で楽しみながら、効率的に知識を習得できます。</p>
+        </div>
+    </section>
+    
+    <section id="features" class="section-gray">
+        <div class="container">
+            <h2>Quriaの主な特徴</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-placeholder">[ アイコン 1 ]</div>
+                    <h3>AIによる完全自動化</h3>
+                    <p>学びたいテーマを入力するだけで、AIが最適な学習カリキュラムを自動生成。レッスンごとにAIが生成する多様な4択問題で、理解度をしっかりチェックします。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-placeholder">[ アイコン 2 ]</div>
+                    <h3>飽きさせない学習の仕組み</h3>
+                    <p>学習の成果が「実績バッジ」や「トロフィー」に。コレクションする楽しさでモチベーションが続きます。「飛び級チャレンジ」機能で、得意な分野はどんどん先に進めます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-placeholder">[ アイコン 3 ]</div>
+                    <h3>学習進捗をスマートに管理</h3>
+                    <p>正答率や学習時間などをグラフで可視化。自分の成長が一目でわかります。学習履歴を分析し、あなたに合ったコンテンツをおすすめします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommend">
+        <div class="container">
+            <h2>こんな方におすすめです</h2>
+            <div class="recommendations">
+                <ul>
+                    <li>効率的な勉強方法を探している学生の方</li>
+                    <li>仕事や趣味のために新しいスキルを身につけたい社会人の方</li>
+                    <li>資格取得や試験勉強を自分のペースで進めたい方</li>
+                    <li>学習を継続するのが苦手な方</li>
+                    <li>教育用のコンテンツ作成の手間を省きたい教育者の方</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="section-gray">
+        <div class="container cta">
+            <h2>さあ、Quriaであなただけの学習の旅を始めましょう！</h2>
+            <p>今すぐダウンロードして、未来の学習体験を。</p>
+            <a href="#" class="app-store-badge">
+                <img src="https://via.placeholder.com/135x40?text=Download+on+the+App+Store" alt="Download on the App Store">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Quria. All Rights Reserved.</p>
+            </div>
+    </footer>
+
+</body>
+</html>
