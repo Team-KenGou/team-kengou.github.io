@@ -194,7 +194,7 @@
         /* inner frame keeps the rounded, clipped screenshot look */
         .slideshow-frame {
             width: 215px;
-            height: 466px;
+            aspect-ratio: 215 / 466; /* modern browsers: height follows aspect ratio */
             border-radius: 40px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -264,7 +264,8 @@
         }
         .dot.active { background: white; transform: scale(1.15); }
         @media (max-width: 768px) {
-            .hero-slideshow { width: 220px; height: 440px; }
+            /* keep width responsive; aspect-ratio will determine height */
+            .slideshow-frame { width: 220px; aspect-ratio: 215 / 466; }
             .slideshow-btn { font-size: 20px; padding: 6px 10px; }
             .slideshow-btn.prev { left: -42px; }
             .slideshow-btn.next { right: -42px; }
