@@ -271,6 +271,24 @@
                 .slideshow-btn.next { right: 0; }
                 .dots { bottom: -22px; }
         }
+
+        /* Contact (Google Form) */
+        #contact .form-embed {
+            display: flex;
+            justify-content: center;
+        }
+        #contact .form-embed iframe {
+            width: 100%;
+            max-width: 640px;
+            height: 900px; /* taller for content breathing room */
+            border: 0;
+            background: #fff;
+        }
+        @media (max-width: 768px) {
+            #contact .form-embed iframe {
+                height: 1000px; /* extra height for mobile to reduce internal scrolling */
+            }
+        }
     </style>
 </head>
 <body>
@@ -362,6 +380,15 @@
             <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
                 <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
             </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <div class="form-embed">
+                <iframe id="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfgbXkpvR1kJQEdeVW4krnoBQ4rI5pNZchgDIAYiiOILNGIQg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="Quria お問い合わせフォーム">読み込んでいます…</iframe>
+            </div>
         </div>
     </section>
 
