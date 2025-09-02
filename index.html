@@ -296,176 +296,454 @@
     <header>
         <div class="container">
             <div class="logo">Quria</div>
-            <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
-                <img src="./images/quria_icon.png" alt="Download on the App Store">
-            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <div class="lang-switch" aria-label="Language selector">
+                    <label for="lang-select" style="display:none">Language</label>
+                    <select id="lang-select" aria-label="Language selector">
+                        <option value="ja">日本語</option>
+                        <option value="en">EN</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+                <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                    <img src="./images/quria_icon.png" alt="Download on the App Store">
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>あなたの学びを、次のレベルへ。</h1>
-            <p>学びたいことを入力するだけ！AIがあなただけの学習プランを自動で作成します。<br>完全無料で始められる革新的な学習体験を、今すぐその手に。</p>
-            <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
-                <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
-            </a>
-            <div class="hero-slideshow" aria-roledescription="carousel">
-                <button class="slideshow-btn prev" aria-label="前の画像">&#10094;</button>
-                <div class="slideshow-frame">
-                    <div class="slides-wrapper">
-                    <img class="slide" src="./images/screen1.png" alt="アプリ画面 1">
-                    <img class="slide" src="./images/screen2.png" alt="アプリ画面 2">
-                    <img class="slide" src="./images/screen3.png" alt="アプリ画面 3">
-                    <img class="slide" src="./images/screen4.png" alt="アプリ画面 4">
-                    <img class="slide" src="./images/screen5.png" alt="アプリ画面 5">
-                    <img class="slide" src="./images/screen6.png" alt="アプリ画面 6">
-                    <img class="slide" src="./images/screen7.png" alt="アプリ画面 7">
+    <!-- Language variants: each .lang-page holds a full page in one language. JS will show/hide based on selection. -->
+    <main>
+        <!-- Japanese -->
+        <article class="lang-page" data-lang="ja">
+            <section class="hero">
+                <div class="container">
+                    <h1>あなたの学びを、次のレベルへ。</h1>
+                    <p>学びたいことを入力するだけ！AIがあなただけの学習プランを自動で作成します。<br>完全無料で始められる革新的な学習体験を、今すぐその手に。</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                    <div class="hero-slideshow" aria-roledescription="carousel">
+                        <button class="slideshow-btn prev" aria-label="前の画像">&#10094;</button>
+                        <div class="slideshow-frame">
+                            <div class="slides-wrapper">
+                                <img class="slide" src="./images/screen1.png" alt="アプリ画面 1">
+                                <img class="slide" src="./images/screen2.png" alt="アプリ画面 2">
+                                <img class="slide" src="./images/screen3.png" alt="アプリ画面 3">
+                                <img class="slide" src="./images/screen4.png" alt="アプリ画面 4">
+                                <img class="slide" src="./images/screen5.png" alt="アプリ画面 5">
+                                <img class="slide" src="./images/screen6.png" alt="アプリ画面 6">
+                                <img class="slide" src="./images/screen7.png" alt="アプリ画面 7">
+                            </div>
+                        </div>
+                        <button class="slideshow-btn next" aria-label="次の画像">&#10095;</button>
+                        <div class="dots" aria-hidden="false"></div>
                     </div>
                 </div>
-                <button class="slideshow-btn next" aria-label="次の画像">&#10095;</button>
-                <div class="dots" aria-hidden="false"></div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="about">
-        <div class="container about-content">
-            <h2>AIが導く、新しい学びのカタチ</h2>
-            <p><strong>Quria（キュリア）</strong>は、あなたの「学びたい」をAIが全力でサポートする、完全無料の革新的な学習プラットフォームです。<br>何をどこから学べばいいかわからない…そんな悩みはもう不要です。学習したいテーマ（例：「マーケティング入門」「TOEICの頻出英単語」「日本の歴史」など）を入力するだけで、AIがあなたに最適化されたカリキュラムを瞬時に作成。ゲーム感覚で楽しみながら、効率的に知識を習得できます。</p>
-        </div>
-    </section>
-    
-    <section id="features" class="section-gray">
-        <div class="container">
-            <h2>Quriaの主な特徴</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon-placeholder"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
-                    <h3>AIによる完全自動化</h3>
-                    <p>学びたいテーマを入力するだけで、AIが最適な学習カリキュラムを自動生成。レッスンごとにAIが生成する多様な4択問題で、理解度をしっかりチェックします。</p>
+            <section id="about">
+                <div class="container about-content">
+                    <h2>AIが導く、新しい学びのカタチ</h2>
+                    <p><strong>Quria（キュリア）</strong>は、あなたの「学びたい」をAIが全力でサポートする、完全無料の革新的な学習プラットフォームです。<br>何をどこから学べばいいかわからない…そんな悩みはもう不要です。学習したいテーマ（例：「マーケティング入門」「TOEICの頻出英単語」「日本の歴史」など）を入力するだけで、AIがあなたに最適化されたカリキュラムを瞬時に作成。ゲーム感覚で楽しみながら、効率的に知識を習得できます。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon-placeholder"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
-                    <h3>飽きさせない学習の仕組み</h3>
-                    <p>学習の成果が「実績バッジ」や「トロフィー」に。コレクションする楽しさでモチベーションが続きます。「飛び級チャレンジ」機能で、得意な分野はどんどん先に進めます。</p>
+            </section>
+
+            <section id="features" class="section-gray">
+                <div class="container">
+                    <h2>Quriaの主な特徴</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                            <h3>AIによる完全自動化</h3>
+                            <p>学びたいテーマを入力するだけで、AIが最適な学習カリキュラムを自動生成。レッスンごとにAIが生成する多様な4択問題で、理解度をしっかりチェックします。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+                            <h3>飽きさせない学習の仕組み</h3>
+                            <p>学習の成果が「実績バッジ」や「トロフィー」に。コレクションする楽しさでモチベーションが続きます。「飛び級チャレンジ」機能で、得意な分野はどんどん先に進めます。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                            <h3>学習進捗をスマートに管理</h3>
+                            <p>正答率や学習時間などをグラフで可視化。自分の成長が一目でわかります。学習履歴を分析し、あなたに合ったコンテンツをおすすめします。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon-placeholder"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
-                    <h3>学習進捗をスマートに管理</h3>
-                    <p>正答率や学習時間などをグラフで可視化。自分の成長が一目でわかります。学習履歴を分析し、あなたに合ったコンテンツをおすすめします。</p>
+            </section>
+
+            <section id="recommend">
+                <div class="container">
+                    <h2>こんな方におすすめです</h2>
+                    <div class="recommendations">
+                        <ul>
+                            <li>効率的な勉強方法を探している学生の方</li>
+                            <li>仕事や趣味のために新しいスキルを身につけたい社会人の方</li>
+                            <li>資格取得や試験勉強を自分のペースで進めたい方</li>
+                            <li>学習を継続するのが苦手な方</li>
+                            <li>教育用のコンテンツ作成の手間を省きたい教育者の方</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="recommend">
-        <div class="container">
-            <h2>こんな方におすすめです</h2>
-            <div class="recommendations">
-                <ul>
-                    <li>効率的な勉強方法を探している学生の方</li>
-                    <li>仕事や趣味のために新しいスキルを身につけたい社会人の方</li>
-                    <li>資格取得や試験勉強を自分のペースで進めたい方</li>
-                    <li>学習を継続するのが苦手な方</li>
-                    <li>教育用のコンテンツ作成の手間を省きたい教育者の方</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <section id="cta" class="section-gray">
+                <div class="container cta">
+                    <h2>さあ、Quriaであなただけの学習の旅を始めましょう！</h2>
+                    <p>今すぐダウンロードして、未来の学習体験を。</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </section>
 
-    <section id="cta" class="section-gray">
-        <div class="container cta">
-            <h2>さあ、Quriaであなただけの学習の旅を始めましょう！</h2>
-            <p>今すぐダウンロードして、未来の学習体験を。</p>
-            <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
-                <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
-            </a>
-        </div>
-    </section>
+            <section id="contact">
+                <div class="container">
+                    <h2>お問い合わせ</h2>
+                    <div class="form-embed">
+                        <iframe id="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfgbXkpvR1kJQEdeVW4krnoBQ4rI5pNZchgDIAYiiOILNGIQg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="Quria お問い合わせフォーム">読み込んでいます…</iframe>
+                    </div>
+                </div>
+            </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>お問い合わせ</h2>
-            <div class="form-embed">
-                <iframe id="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfgbXkpvR1kJQEdeVW4krnoBQ4rI5pNZchgDIAYiiOILNGIQg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="Quria お問い合わせフォーム">読み込んでいます…</iframe>
-            </div>
-        </div>
-    </section>
+            <footer>
+                <div class="container">
+                    <p>&copy; 2025 Quria. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Quria. All Rights Reserved.</p>
-            </div>
-    </footer>
+        <!-- English (auto-generated translation) -->
+        <article class="lang-page" data-lang="en" style="display:none">
+            <section class="hero">
+                <div class="container">
+                    <h1>Take your learning to the next level.</h1>
+                    <p>Just type what you want to learn — our AI will instantly create a personalized study plan for you.<br>Start for free and enjoy an innovative learning experience.</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                    <div class="hero-slideshow" aria-roledescription="carousel">
+                        <button class="slideshow-btn prev" aria-label="Previous image">&#10094;</button>
+                        <div class="slideshow-frame">
+                            <div class="slides-wrapper">
+                                <img class="slide" src="./images/screen1.png" alt="App screen 1">
+                                <img class="slide" src="./images/screen2.png" alt="App screen 2">
+                                <img class="slide" src="./images/screen3.png" alt="App screen 3">
+                                <img class="slide" src="./images/screen4.png" alt="App screen 4">
+                                <img class="slide" src="./images/screen5.png" alt="App screen 5">
+                                <img class="slide" src="./images/screen6.png" alt="App screen 6">
+                                <img class="slide" src="./images/screen7.png" alt="App screen 7">
+                            </div>
+                        </div>
+                        <button class="slideshow-btn next" aria-label="Next image">&#10095;</button>
+                        <div class="dots" aria-hidden="false"></div>
+                    </div>
+                </div>
+            </section>
 
+            <section id="about">
+                <div class="container about-content">
+                    <h2>AI-powered learning, reimagined</h2>
+                    <p><strong>Quria</strong> is a free, innovative learning platform where AI fully supports what you want to learn.<br>If you don't know where to start, simply enter a topic (for example: "Intro to Marketing", "TOEIC high-frequency words", "Japanese history") and the AI will instantly create a curriculum optimized for you. Learn efficiently while enjoying gamified features.</p>
+                </div>
+            </section>
+
+            <section id="features" class="section-gray">
+                <div class="container">
+                    <h2>Main Features of Quria</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                            <h3>Fully Automated by AI</h3>
+                            <p>Enter your learning topic and the AI will auto-generate an optimal curriculum. Each lesson includes varied 4-choice questions generated by AI to check comprehension.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+                            <h3>Engaging Learning Design</h3>
+                            <p>Earn achievement badges and trophies for your progress. Collection mechanics keep motivation high. The "Skip-level Challenge" lets you advance faster in areas you excel at.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                            <h3>Smart Progress Management</h3>
+                            <p>Track accuracy and study time with visual graphs so you can see growth at a glance. Recommendations adapt based on your learning history.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recommend">
+                <div class="container">
+                    <h2>Who is Quria for?</h2>
+                    <div class="recommendations">
+                        <ul>
+                            <li>Students looking for efficient study methods</li>
+                            <li>Professionals who want to learn new skills for work or hobbies</li>
+                            <li>People preparing for certifications or exams at their own pace</li>
+                            <li>Those who struggle to keep learning consistently</li>
+                            <li>Educators who want to reduce time spent creating learning content</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta" class="section-gray">
+                <div class="container cta">
+                    <h2>Start your learning journey with Quria!</h2>
+                    <p>Download now and experience the future of learning.</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <div class="form-embed">
+                        <iframe id="contact-form-en" src="https://docs.google.com/forms/d/e/1FAIpQLSfgbXkpvR1kJQEdeVW4krnoBQ4rI5pNZchgDIAYiiOILNGIQg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="Quria Contact Form">Loading…</iframe>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2025 Quria. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </article>
+
+        <!-- Chinese (auto-generated translation) -->
+        <article class="lang-page" data-lang="zh" style="display:none">
+            <section class="hero">
+                <div class="container">
+                    <h1>将你的学习提升到新高度。</h1>
+                    <p>只需输入您想学习的内容，AI 会即时为您生成个性化学习计划。<br>立即免费开始，体验创新的学习方式。</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                    <div class="hero-slideshow" aria-roledescription="carousel">
+                        <button class="slideshow-btn prev" aria-label="上一张">&#10094;</button>
+                        <div class="slideshow-frame">
+                            <div class="slides-wrapper">
+                                <img class="slide" src="./images/screen1.png" alt="应用界面 1">
+                                <img class="slide" src="./images/screen2.png" alt="应用界面 2">
+                                <img class="slide" src="./images/screen3.png" alt="应用界面 3">
+                                <img class="slide" src="./images/screen4.png" alt="应用界面 4">
+                                <img class="slide" src="./images/screen5.png" alt="应用界面 5">
+                                <img class="slide" src="./images/screen6.png" alt="应用界面 6">
+                                <img class="slide" src="./images/screen7.png" alt="应用界面 7">
+                            </div>
+                        </div>
+                        <button class="slideshow-btn next" aria-label="下一张">&#10095;</button>
+                        <div class="dots" aria-hidden="false"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container about-content">
+                    <h2>AI 引导的新型学习方式</h2>
+                    <p><strong>Quria</strong> 是免费且具有创新性的学习平台，AI 全面支持您想要学习的内容。<br>如果您不知道从哪里开始，只需输入主题（例如：“市场营销入门”、“TOEIC 高频词汇”、“日本历史”），AI 会即时为您生成最适合的课程。</p>
+                </div>
+            </section>
+
+            <section id="features" class="section-gray">
+                <div class="container">
+                    <h2>Quria 的主要特点</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                            <h3>AI 完全自动化</h3>
+                            <p>只需输入学习主题，AI 即可自动生成最优学习计划。每节课均包含 AI 生成的多样化四选题，以检测理解度。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+                            <h3>趣味化的学习机制</h3>
+                            <p>学习成果会以“成就徽章”和“奖杯”呈现。收集系统能保持学习动力。通过“跳级挑战”功能，您可以在擅长的领域更快前进。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-placeholder"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                            <h3>智能管理学习进度</h3>
+                            <p>通过图表可视化正确率和学习时间，一目了然地查看成长轨迹。学习历史会被分析并推荐适合您的内容。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recommend">
+                <div class="container">
+                    <h2>推荐给这些人</h2>
+                    <div class="recommendations">
+                        <ul>
+                            <li>寻找高效学习方法的学生</li>
+                            <li>希望为了工作或兴趣掌握新技能的在职人士</li>
+                            <li>想按自己的节奏准备证书或考试的人</li>
+                            <li>难以持续学习的人</li>
+                            <li>希望减少教材制作工作量的教育者</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta" class="section-gray">
+                <div class="container cta">
+                    <h2>现在就用 Quria 开始你的学习之旅！</h2>
+                    <p>立即下载，体验未来的学习方式。</p>
+                    <a href="https://apps.apple.com/app/6751156120" class="app-store-badge">
+                        <img src="./images/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>联系方式</h2>
+                    <div class="form-embed">
+                        <iframe id="contact-form-zh" src="https://docs.google.com/forms/d/e/1FAIpQLSfgbXkpvR1kJQEdeVW4krnoBQ4rI5pNZchgDIAYiiOILNGIQg/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="Quria 联系表单">加载中…</iframe>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2025 Quria. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </article>
+    </main>
     <script>
+    // Language + carousel initializer
     (function(){
-        const carousel = document.querySelector('.hero-slideshow');
-        if (!carousel) return;
+        const supported = ['ja','en','zh'];
+        const defaultLang = 'ja';
 
-        const slides = Array.from(carousel.querySelectorAll('.slide'));
-        const prevBtn = carousel.querySelector('.slideshow-btn.prev');
-        const nextBtn = carousel.querySelector('.slideshow-btn.next');
-        const dotsContainer = carousel.querySelector('.dots');
-        let current = 0;
-        let timer = null;
-        const interval = 3000;
+        // translations for title/meta (auto-generated)
+        const metaMap = {
+            ja: {
+                title: 'Quria (キュリア) - AIがあなただけの学習プランを自動作成',
+                description: '学びたいことを入力するだけ！AIがあなただけの学習プランを自動で作成します。完全無料で始められる革新的な学習体験を、今すぐその手に。'
+            },
+            en: {
+                title: 'Quria - AI generates a personalized study plan for you',
+                description: 'Just enter what you want to learn — AI will automatically create a study plan tailored to you. Start for free and enjoy an innovative learning experience.'
+            },
+            zh: {
+                title: 'Quria - AI 为您生成个性化学习计划',
+                description: '只需输入您想学习的内容，AI 会自动为您生成个性化的学习计划。立即免费开始，体验创新的学习方式。'
+            }
+        };
 
-        // build dots
-        slides.forEach((s, i) => {
-            const d = document.createElement('button');
-            d.className = 'dot';
-            d.setAttribute('aria-label', `スライド ${i+1}`);
-            d.addEventListener('click', () => goTo(i));
-            dotsContainer.appendChild(d);
-        });
-
-        const dots = Array.from(dotsContainer.children);
-
-        function update() {
-            slides.forEach((s, i) => s.classList.toggle('active', i === current));
-            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        function getPreferredLang(){
+            const stored = localStorage.getItem('quria_lang');
+            if(stored && supported.includes(stored)) return stored;
+            const nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if(!nav) return defaultLang;
+            const primary = nav.split('-')[0];
+            return supported.includes(primary) ? primary : defaultLang;
         }
 
-        function goTo(index) {
-            current = (index + slides.length) % slides.length;
+        function showLang(lang){
+            document.querySelectorAll('.lang-page').forEach(el=>{
+                el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+            });
+            try{ document.documentElement.lang = lang; }catch(e){}
+            localStorage.setItem('quria_lang', lang);
+            const sel = document.getElementById('lang-select');
+            if(sel) sel.value = lang;
+            // update meta/title
+            const m = metaMap[lang] || metaMap[defaultLang];
+            document.title = m.title;
+            const desc = document.querySelector('meta[name="description"]');
+            if(desc) desc.setAttribute('content', m.description);
+
+            // initialize visible slideshow (re-init to avoid duplicates)
+            initSlideshowFor(document.querySelector('.lang-page[data-lang="'+lang+'"]'));
+        }
+
+        const select = document.getElementById('lang-select');
+        if(select){
+            select.addEventListener('change', ()=> showLang(select.value));
+        }
+
+        // slideshow initializer for a given page element
+        function initSlideshowFor(pageEl){
+            if(!pageEl) return;
+            const carousel = pageEl.querySelector('.hero-slideshow');
+            if(!carousel) return;
+
+            // clean up previous instance data if any
+            if(carousel._initialized) return;
+            carousel._initialized = true;
+
+            const slides = Array.from(carousel.querySelectorAll('.slide'));
+            const prevBtn = carousel.querySelector('.slideshow-btn.prev');
+            const nextBtn = carousel.querySelector('.slideshow-btn.next');
+            const dotsContainer = carousel.querySelector('.dots');
+            let current = 0;
+            let timer = null;
+            const interval = 3000;
+
+            // build dots
+            slides.forEach((s, i) => {
+                const d = document.createElement('button');
+                d.className = 'dot';
+                const aria = s.getAttribute('alt') || ('Slide '+(i+1));
+                d.setAttribute('aria-label', aria);
+                d.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(d);
+            });
+
+            const dots = Array.from(dotsContainer.children);
+
+            function update() {
+                slides.forEach((s, i) => s.classList.toggle('active', i === current));
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            function goTo(index) {
+                current = (index + slides.length) % slides.length;
+                update();
+                restartTimer();
+            }
+
+            function next() { goTo(current + 1); }
+            function prev() { goTo(current - 1); }
+
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+
+            // keyboard
+            carousel.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
+            });
+
+            // touch support
+            let startX = 0;
+            carousel.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, {passive:true});
+            carousel.addEventListener('touchend', (e) => {
+                const dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) > 40) dx > 0 ? prev() : next();
+            });
+
+            // pause on hover/focus
+            function pause() { clearInterval(timer); timer = null; }
+            function play() { if (!timer) timer = setInterval(next, interval); }
+            carousel.addEventListener('mouseenter', pause);
+            carousel.addEventListener('mouseleave', play);
+            carousel.addEventListener('focusin', pause);
+            carousel.addEventListener('focusout', play);
+
+            function restartTimer(){ pause(); play(); }
+
+            // init
             update();
-            restartTimer();
+            play();
         }
 
-        function next() { goTo(current + 1); }
-        function prev() { goTo(current - 1); }
-
-        nextBtn.addEventListener('click', next);
-        prevBtn.addEventListener('click', prev);
-
-        // keyboard
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prev();
-            if (e.key === 'ArrowRight') next();
-        });
-
-        // touch support
-        let startX = 0;
-        carousel.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, {passive:true});
-        carousel.addEventListener('touchend', (e) => {
-            const dx = e.changedTouches[0].clientX - startX;
-            if (Math.abs(dx) > 40) dx > 0 ? prev() : next();
-        });
-
-        // pause on hover/focus
-        function pause() { clearInterval(timer); timer = null; }
-        function play() { if (!timer) timer = setInterval(next, interval); }
-        carousel.addEventListener('mouseenter', pause);
-        carousel.addEventListener('mouseleave', play);
-        carousel.addEventListener('focusin', pause);
-        carousel.addEventListener('focusout', play);
-
-        function restartTimer(){ pause(); play(); }
-
-        // init
-        update();
-        play();
+        // initial language selection
+        const lang = getPreferredLang();
+        showLang(lang);
     })();
     </script>
 </body>
